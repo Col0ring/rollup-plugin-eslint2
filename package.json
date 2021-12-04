@@ -1,12 +1,17 @@
 {
   "name": "rollup-plugin-eslint2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forked from @rollup/plugin-eslint, to resolve the conflict between @rollup/plugin-typescript and  @rollup/plugin-eslint",
   "license": "MIT",
   "author": {
     "name": "Col0ring",
     "email": "1561999073@qq.com"
   },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "dependencies": {
     "@rollup/pluginutils": "^4.1.1",
     "eslint": "^8.4.0"
