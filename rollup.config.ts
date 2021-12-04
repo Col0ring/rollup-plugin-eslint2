@@ -15,7 +15,10 @@ export default {
     resolve({
       extensions: ['.ts', '.js'],
     }),
-    typescript({ sourceMap: false }),
+    typescript({
+      sourceMap: false,
+      tsconfig: path.resolve(__dirname, './tsconfig.json'),
+    }),
     del({ targets: path.resolve(__dirname, './dist') }),
   ],
 }
