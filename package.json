@@ -1,0 +1,58 @@
+{
+  "name": "rollup-plugin-eslint2",
+  "version": "1.0.0",
+  "description": "Forked from @rollup/plugin-eslint, to resolve the conflict between @rollup/plugin-typescript and  @rollup/plugin-eslint",
+  "license": "MIT",
+  "author": {
+    "name": "Col0ring",
+    "email": "1561999073@qq.com"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^4.1.1",
+    "eslint": "^8.4.0"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "pre-commit:lint-staged": "lint-staged",
+    "commit-msg:commitlint": "commitlint --config commitlint.config.js -e $HUSKY_GIT_PARAMS",
+    "build": "rollup -c rollup.config.ts",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:prettier": "prettier --write --no-error-on-unmatched-pattern **/*.{ts,js,json,yml,yaml,md}",
+    "lint:eslint": "eslint --fix -c .eslintrc.js --ext .ts,.js .",
+    "commit": "cz"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "rollup-plugin",
+    "eslint",
+    "es2015",
+    "es6",
+    "lint"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-angular": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/eslint": "^8.2.1",
+    "@types/node": "^16.11.11",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "rollup": "^2.60.2",
+    "rollup-plugin-delete": "^2.0.0",
+    "ts-node": "^10.4.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
+  }
+}
