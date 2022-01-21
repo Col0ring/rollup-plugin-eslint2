@@ -1,11 +1,16 @@
 {
   "name": "rollup-plugin-eslint2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Forked from @rollup/plugin-eslint, to resolve the conflict between @rollup/plugin-typescript and  @rollup/plugin-eslint",
   "license": "MIT",
   "author": {
     "name": "Col0ring",
     "email": "1561999073@qq.com"
+  },
+  "homepage": "https://github.com/Col0ring/rollup-plugin-eslint2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Col0ring/rollup-plugin-eslint2.git"
   },
   "files": [
     "dist",
